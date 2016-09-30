@@ -1,0 +1,12 @@
+<div class="row">
+  <ul>
+    <li ng-repeat="item in found" class="clearfix">
+      <div class="col-md-2">{{item.name}}</div>
+      <div class="col-md-1">{{item.short_name}}</div>
+      <div class="col-md-6">{{item.description}}</div>
+      <div class="col-md-3"><button ng-click="onRemove({index: $index});">Don't want this one!</button></div>
+    </li>
+  </ul>
+
+  <h2 id="message" ng-if="found.length == 0">Nothing Found.</h2>
+</div>
